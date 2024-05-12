@@ -1,0 +1,31 @@
+@startuml
+
+class Juego
+class Jugador 
+class IA 
+class Pacman 
+class Fantasma
+class Mapa 
+class Superpastilla
+class Fruta
+class Puntaje
+class Nivel
+class Marcador 
+class Comestible
+
+Jugador o-- Pacman
+IA o-- Fantasma 
+PacMan o-- Mapa 
+Fantasma o-- Mapa
+
+Jugador *-- Puntaje 
+PacMan *-- Nivel
+Jugador *-- Marcador
+Mapa *-- Superpastilla 
+Mapa *-- Fruta
+
+Fruta --|> Comestible
+Superpastilla --|> Comestible
+
+
+@endl 
